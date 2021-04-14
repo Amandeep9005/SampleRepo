@@ -14,7 +14,12 @@ export const PlayerActionReducer = produce((state=GetInitialState(),action)=>{
     case "CALL_SERVICE":{
        state.data = action.data
         return state;
-        }    
+        } 
+    case "GET ACCESS TOKEN":{
+        state.token = action.data.id_token
+        sessionStorage.setItem('gb-authorization', state.token);
+        return state;
+        }        
     default :
         return state;
     

@@ -2,6 +2,8 @@
 import './App.css';
 import PlayerAction from './Component/Players/PlayerAction';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import HandleLogin from './Component/Players/HandleLogin';
+import Login from './Component/Players/Login';
 
 function App() {
   return (
@@ -10,8 +12,11 @@ function App() {
                 <Route path="/public">
                    <PlayerAction/>
                 </Route>
+                <Route path="/handleLogin">
+                    <HandleLogin />
+                </Route>
                 <Route>
-                    <Redirect to="/public" />
+                    <Login />
                 </Route>
             </Switch>
         </Router>

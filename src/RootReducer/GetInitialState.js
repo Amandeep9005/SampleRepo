@@ -2,7 +2,8 @@ const IntitialState ={
     Players:{
     name:"",
     team:"",
-    data:[]
+    data:[],
+    token:"",
 },
 
 }
